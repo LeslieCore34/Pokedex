@@ -1,6 +1,9 @@
 function NavBar({ pokemonIndex, setpokemonIndex, pokemonList }) {
 
   function handleClick(photo) {
+    if (pokemonList[photo].name === "pikachu") {
+      alert("pika pikachu !!!");
+    }
     setpokemonIndex(photo);
   }
 
@@ -11,6 +14,7 @@ function NavBar({ pokemonIndex, setpokemonIndex, pokemonList }) {
         <button
           onClick={() => handleClick(photo)}
           key={pokename.name}
+
         >
           {pokename.name}
         </button>
